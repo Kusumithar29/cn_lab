@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Apartment Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+
+<!-- TOP STRIPS -->
+<div class="top-strip"></div>
+<div class="second-strip">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://uploads.onecompiler.io/42kpv2sv4/44kw2c8vu/WhatsApp%20Image%202026-04-21%20at%203.56.34%20PM.jpeg" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><b><a href="index.html">Home</a></b></li>
+            <li><b><a href="#">About us</a></b></li>
+            <li><b><a href="#">Contact us</a></b></li>
+            <li><b><a href="login.html" class="active">Login/Register</a></b></li>
+        </ul>
+    </nav>
+</div>
+
+<section class="login-container">
+  <!-- REGISTER CARD (LEFT) -->
+    <div class="register-box">
+        <h2>Register</h2>
+
+        <form>
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>User Type</label>
+                <select>
+                    <option>Resident</option>
+                    <option>Tenant</option>
+                    <option>Manager</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Block Number</label>
+                <input type="text" required>
+            </div>
+
+            <div class="input-group">
+                <label>Flat Number</label>
+                <input type="text" required>
+            </div>
+
+            <div class="input-group">
+                <label>Create Password</label>
+                <input type="password" required>
+            </div>
+            <div class="link">
+            Already have an account? <a href="#">Login</a>
+        </div>
+
+        <div class="or">Or</div>
+
+            <button class="login-btn">Register</button>
+        </form>
+    </div>
+
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <!-- ROLE SELECTION -->
+        <div class="input-group">
+            <label>Select User Type</label>
+            <select id="userType" onchange="showForm()">
+                <option value="">-- Select --</option>
+                <option value="admin">Admin</option>
+                <option value="manager">Manager</option>
+                <option value="resident">Resident</option>
+                <option value="tenant">Tenant</option>
+            </select>
+        </div>
+
+        <!-- ADMIN LOGIN -->
+        <form id="adminForm" class="role-form">
+            <div class="input-group">
+                <label>Admin ID</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" required>
+            </div>
+            <div class="link">
+            Don't have an account? <a href="#">Signup</a>
+        </div>
+
+        <div class="or">Or</div>
+        
+            <button class="login-btn">Login as Admin</button>
+        </form>
+
+        <!-- MANAGER LOGIN -->
+        <form id="managerForm" class="role-form">
+           <div class="input-group">
+                <label>Manager Name</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" required>
+            </div>
+            <div class="input-group">
+                <label>Block Number</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Manger ID</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" required>
+            </div>
+            <div class="link">
+            Don't have an account? <a href="#">Signup</a>
+        </div>
+
+        <div class="or">Or</div>
+        
+            <button class="login-btn">Login as Manager</button>
+        </form>
+
+        <!-- RESIDENT LOGIN -->
+        <form id="residentForm" class="role-form">
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Block Number</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Flat Number</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>User ID</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" required>
+            </div>
+            <div class="link">
+            Don't have an account? <a href="#">Signup</a>
+        </div>
+
+        <div class="or">Or</div>
+        
+            <button class="login-btn">Login as Resident</button>
+        </form>
+
+        <!-- TENANT LOGIN -->
+        <form id="tenantForm" class="role-form">
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Block Number</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Flat Number</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>User ID</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" required>
+            </div>
+            <div class="link">
+            Don't have an account? <a href="#">Signup</a>
+        </div>
+
+        <div class="or">Or</div>
+        
+            <button class="login-btn">Login as Tenant</button>
+        </form>
+
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

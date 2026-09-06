@@ -1,0 +1,261 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   NORMAL BODY (HOMEPAGE)
+========================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   TOP STRIPS
+========================= */
+.top-strip {
+    width: 100%;
+    height: 40px;
+    background: #2c3e50;
+}
+
+.second-strip {
+    width: 100%;
+    height: 60px;
+    background: #cfd8dc;
+    display: flex;
+    align-items: center;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #000000;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    height: 90vh;
+    background: url('https://resize.indiatvnews.com/en/resize/oldbucket/1200_-/businessindia/India-s-Residen12206.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.55);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* LOGIN PAGE */
+.login-page {
+    background: #ecf0f1;
+    background: url('https://resize.indiatvnews.com/en/resize/oldbucket/1200_-/businessindia/India-s-Residen12206.jpg') no-repeat center center/cover;
+
+}
+
+.role-form {
+    display: none;
+}
+
+/* LOGIN CONTAINER */
+.login-container {
+  text-align: center;
+  padding: 20px;
+    min-height: calc(100vh - 100px); /* adjust based on your top strips height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+select {
+    display: block;
+    margin: 10px auto;   /* centers horizontally */
+    padding: 8px;
+}
+
+/* LOGIN BOX */
+.login-box {
+  text-align: center;
+    background: #ecf0f1;
+    padding: 30px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: auto;
+}
+
+.login-box h2 {
+  text-align: center;
+    margin-bottom: 20px;
+}
+
+/* INPUT GROUP */
+.input-group {
+  text-align: center;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+  text-align: center;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+  text-align: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* BUTTON */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.login-btn:hover {
+    background: #34495e;
+}
+
+/* SIDE BY SIDE LAYOUT */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    min-height: calc(100vh - 100px);
+    padding: 20px;
+}
+
+/* REGISTER BOX (same style as login) */
+.register-box {
+    text-align: center;
+    background: #ecf0f1;
+    padding: 30px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: auto;
+}
+
+.or {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+    .cards {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+    }
+}
